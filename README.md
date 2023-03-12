@@ -1,3 +1,13 @@
 # camera-roll-gallery-demo
-This application would prompt you to pick a few photos from your camera roll 
-and then display them in painting frames on a wall that the camera would be facing.
+
+An example Unity Project that makes use of AR Foundation framework and echo3D Unity SDK.
+This demo uses a phone camera to detect vertical AR planes (i.e. Walls) and places a 3D picture frame asset.
+The picture frame asset is streamed into the project by using the echo3D Unity SDK package's Echo3DService prefab and the Echo3DHologram.cs script.
+Once the picture frame assets are placed, the assets can be tapped upon to add image from mobile phone camera roll/gallery.
+
+# Screenshots
+<img src="https://user-images.githubusercontent.com/114193960/224578931-d228cb38-89ec-42ba-881e-d1b350afe6d8.jpg" width="150" height="280">
+Screenshot of application scanning for vertical planes (Grey dots are detected planes).
+
+<img src="https://user-images.githubusercontent.com/114193960/224579315-3148277f-4885-48d0-9bc0-58eda74ed569.jpg" width="150" height="280">
+Screenshot of spawned in picture frame objects (Angle of each picture frame depends on phone camera's angle when screen was tapped).
