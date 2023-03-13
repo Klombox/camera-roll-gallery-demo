@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "co.echo3d.echounitysdk": {
-      "version": "file:C:/Users/Ken/Desktop/co.echo3d.unity",
+      "version": "1.0.0",
       "depth": 0,
       "source": "local",
       "dependencies": {
