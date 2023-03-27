@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2370573392747434028
 MonoBehaviour:
@@ -47,7 +47,7 @@ MonoBehaviour:
   apiKey: wispy-fire-1939
   entries: 5a5355d8-2d1d-4d98-853d-f1b9c3c8578d
   tags: 
-  editorPreview: 0
+  editorPreview: 1
   queryURL: 
   queryOnly: 0
   disableRemoteTransformations: 0

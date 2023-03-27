@@ -1,4 +1,4 @@
-Library: C:\Users\Ken\Desktop\testspace_for_demos\echo3DProjectGalleryDemo\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: C:\Users\Ken\Desktop\gitClones\camera-roll-gallery-demov1\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-14
 --target=ARMV7A_NEON32
@@ -7,9 +7,9 @@ Library: C:\Users\Ken\Desktop\testspace_for_demos\echo3DProjectGalleryDemo\Temp\
 --dump=Function
 --float-precision=Standard
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\Ken\Desktop\testspace_for_demos\echo3DProjectGalleryDemo\Temp\Burst
+--temp-folder=C:\Users\Ken\Desktop\gitClones\camera-roll-gallery-demov1\Temp\Burst
 --debug=Full
---output=C:\Users\Ken\Desktop\testspace_for_demos\echo3DProjectGalleryDemo\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--output=C:\Users\Ken\Desktop\gitClones\camera-roll-gallery-demov1\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 
