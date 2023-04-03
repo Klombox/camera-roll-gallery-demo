@@ -35,6 +35,15 @@ extern void PlaceObject_FingerDown_m8F45C6F6D5360556C0854AAA70419FB18BFE1FA9 (vo
 extern void PlaceObject_SpawnObjects_m07552F51E9D6FB71123782A734A76BF5941CCBF6 (void);
 extern void PlaceObject_RotateObjectOnPlane_mA874AB73BBF00FC1EC74C591D2609074B816E425 (void);
 extern void PlaceObject__ctor_m73094142430E3C4071B1660682AB5867522D1510 (void);
+extern void PlaceObjectModified_Awake_m97BB9DAF69A0D9E95887B058B1BEB9901372F226 (void);
+extern void PlaceObjectModified_OnEnable_mE078E45FB952CA5F8520E9A076B86ECF8E41E076 (void);
+extern void PlaceObjectModified_OnDisable_m5380CFFF8CBB103C71CE84D5FE87AD82FF758CCD (void);
+extern void PlaceObjectModified_FingerDown_mF908533D5105930CF17D69415627CF19B85368A9 (void);
+extern void PlaceObjectModified_SpawnObjects_mADC0500C4FE4D73413A078BDA98A916245E31F32 (void);
+extern void PlaceObjectModified_RotateObjectOnPlane_mCCC9E77770412CE86A274C93587E480CC14B9AC5 (void);
+extern void PlaceObjectModified__ctor_m808326E418B7A3CD13E2232C56501118302EF8D5 (void);
+extern void U3CU3Ec__DisplayClass13_0__ctor_m82D88BB56E5865B2B504984929E10B09A95EAD3D (void);
+extern void U3CU3Ec__DisplayClass13_0_U3CSpawnObjectsU3Eb__0_m437C6AE6D7A50451F2DC1765B2CD8883F410ABCE (void);
 extern void CameraController_Update_mBCB871B23DBA60444D43AB56D780478BA3D355E6 (void);
 extern void CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950 (void);
 extern void RoomShaderConfig_Update_m7CB39A6CA32B20810DECC7ABC0D6CAE4E900D89A (void);
@@ -77,7 +86,7 @@ extern void ErrorDelegate__ctor_m422966B21ABE8253823B3EEE64F9C23ABB107B0C (void)
 extern void ErrorDelegate_Invoke_mEE99A50582D0BDC0EFCA63FC48B36C45736CDEA8 (void);
 extern void ErrorDelegate_BeginInvoke_m728F2182FD2407E2D482A786C51B77ABFFFDB27B (void);
 extern void ErrorDelegate_EndInvoke_m038C19A1951C1BE99DD869C9D9C47AC2BB54B020 (void);
-static Il2CppMethodPointer s_methodPointers[66] = 
+static Il2CppMethodPointer s_methodPointers[75] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -102,6 +111,15 @@ static Il2CppMethodPointer s_methodPointers[66] =
 	PlaceObject_SpawnObjects_m07552F51E9D6FB71123782A734A76BF5941CCBF6,
 	PlaceObject_RotateObjectOnPlane_mA874AB73BBF00FC1EC74C591D2609074B816E425,
 	PlaceObject__ctor_m73094142430E3C4071B1660682AB5867522D1510,
+	PlaceObjectModified_Awake_m97BB9DAF69A0D9E95887B058B1BEB9901372F226,
+	PlaceObjectModified_OnEnable_mE078E45FB952CA5F8520E9A076B86ECF8E41E076,
+	PlaceObjectModified_OnDisable_m5380CFFF8CBB103C71CE84D5FE87AD82FF758CCD,
+	PlaceObjectModified_FingerDown_mF908533D5105930CF17D69415627CF19B85368A9,
+	PlaceObjectModified_SpawnObjects_mADC0500C4FE4D73413A078BDA98A916245E31F32,
+	PlaceObjectModified_RotateObjectOnPlane_mCCC9E77770412CE86A274C93587E480CC14B9AC5,
+	PlaceObjectModified__ctor_m808326E418B7A3CD13E2232C56501118302EF8D5,
+	U3CU3Ec__DisplayClass13_0__ctor_m82D88BB56E5865B2B504984929E10B09A95EAD3D,
+	U3CU3Ec__DisplayClass13_0_U3CSpawnObjectsU3Eb__0_m437C6AE6D7A50451F2DC1765B2CD8883F410ABCE,
 	CameraController_Update_mBCB871B23DBA60444D43AB56D780478BA3D355E6,
 	CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950,
 	RoomShaderConfig_Update_m7CB39A6CA32B20810DECC7ABC0D6CAE4E900D89A,
@@ -146,7 +164,7 @@ static Il2CppMethodPointer s_methodPointers[66] =
 	ErrorDelegate_BeginInvoke_m728F2182FD2407E2D482A786C51B77ABFFFDB27B,
 	ErrorDelegate_EndInvoke_m038C19A1951C1BE99DD869C9D9C47AC2BB54B020,
 };
-static const int32_t s_InvokerIndices[66] = 
+static const int32_t s_InvokerIndices[75] = 
 {
 	7848,
 	6260,
@@ -170,6 +188,15 @@ static const int32_t s_InvokerIndices[66] =
 	6260,
 	6348,
 	3385,
+	7961,
+	7961,
+	7961,
+	7961,
+	6260,
+	6348,
+	3385,
+	7961,
+	7961,
 	7961,
 	7961,
 	7961,
@@ -219,7 +246,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	66,
+	75,
 	s_methodPointers,
 	0,
 	NULL,
