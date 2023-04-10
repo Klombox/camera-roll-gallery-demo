@@ -942,7 +942,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6832477042579798109, guid: e38cc27d3e377c544998e8fbdd75101e, type: 3}
-  numToSpawn: 1
+  numToSpawn: 4
   canvas: {fileID: 146146560}
   buttonPrefab: {fileID: 8449039854251303276, guid: fd29c8d6a726bc844999485cbf0e277b,
+    type: 3}
+  pickerController: {fileID: 2655498533124187957, guid: dde4f35ffc09f8f4fbe1c694bc40dc61,
     type: 3}

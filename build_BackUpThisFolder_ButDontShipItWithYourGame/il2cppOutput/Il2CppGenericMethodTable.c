@@ -60677,5 +60677,5 @@ const Il2CppGenericMethodFunctionsDefinitions g_Il2CppGenericMethodFunctions[606
 { 69872, 60479, 7513, 11556},
 { 69873, 60480, 10497, -1},
 { 69874, 60481, 10497, -1},
-{ 73815, 0, 0, -1},
+{ 73816, 0, 0, -1},
 };

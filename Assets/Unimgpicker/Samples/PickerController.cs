@@ -7,10 +7,10 @@ namespace Kakera
     public class PickerController : MonoBehaviour
     {
         [SerializeField]
-        private Unimgpicker imagePicker;
+        public Unimgpicker imagePicker; //was private
 
         [SerializeField]
-        private MeshRenderer imageRenderer;
+        public MeshRenderer imageRenderer; //was private
 
         private int[] sizes = { 1024, 256, 16 };
 
@@ -25,7 +25,7 @@ namespace Kakera
             imagePicker.Show("Select Image", "unimgpicker");
         }
 
-        private IEnumerator LoadImage(string path, MeshRenderer output)
+        public IEnumerator LoadImage(string path, MeshRenderer output) //was private
         {
             var url = "file://" + path;
             var unityWebRequestTexture = UnityWebRequestTexture.GetTexture(url);
@@ -35,6 +35,10 @@ namespace Kakera
             if (texture == null)
             {
                 Debug.LogError("Failed to load texture url:" + url);
+            }
+            else //adding a log stmt for successful loads
+            {
+                Debug.Log("Texture loaded successfully from url:" + url);
             }
 
             output.material.mainTexture = texture;

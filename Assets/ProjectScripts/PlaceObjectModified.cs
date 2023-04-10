@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
+using Kakera;
 
 [RequireComponent (typeof(ARRaycastManager), typeof(ARPlaneManager) )]
 public class PlaceObjectModified : MonoBehaviour
@@ -17,6 +18,7 @@ public class PlaceObjectModified : MonoBehaviour
     private Canvas canvas; // reference to the canvas object
     [SerializeField]
     private GameObject buttonPrefab; // reference to the button prefab
+    public PickerController pickerController; //ref to PickerController prefab
 
     private ARRaycastManager aRRaycastManager; //ref to raycast manager
     private ARPlaneManager aRPlaneManager; //ref to plane manager
@@ -64,6 +66,12 @@ public class PlaceObjectModified : MonoBehaviour
                 Pose pose = hit.pose;
                 GameObject obj = Instantiate(prefab, pose.position, pose.rotation);
 
+                //reference to the plane on the live gameobject meshRenderer
+                MeshRenderer liveMeshRenderer = obj.GetComponent<MeshRenderer>();
+
+                //reference to scene PickerController in this script
+                GameObject.Find("PickerController").GetComponent<PickerController>().imageRenderer = liveMeshRenderer;
+
                 RotateObjectOnPlane(obj, hit.trackableId); //ref to rotating function
 
                 // instantiate the button prefab and set its parent to the canvas
@@ -73,7 +81,11 @@ public class PlaceObjectModified : MonoBehaviour
 
                 // add an event listener to the button that destroys it when clicked
                 Button buttonComponent = button.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(() => Destroy(button));
+                buttonComponent.onClick.AddListener(() =>
+                {
+                    pickerController.LoadImage("path/to/image.jpg", liveMeshRenderer);
+                    Destroy(button);
+                });
 
                 numSpawned++; //increment counter variable
 
