@@ -18,6 +18,7 @@ public class PlaceObjectModified : MonoBehaviour
     private Canvas canvas; // reference to the canvas object
     [SerializeField]
     private GameObject buttonPrefab; // reference to the button prefab
+    private GameObject getImageButton;
     public PickerController pickerController; //ref to PickerController prefab
 
     private ARRaycastManager aRRaycastManager; //ref to raycast manager
@@ -54,6 +55,10 @@ public class PlaceObjectModified : MonoBehaviour
     //function to spawn objects
     private void SpawnObjects(Vector2 touchPosition)
     {
+        if (getImageButton != null && getImageButton.activeInHierarchy)
+        {
+            return;
+        }
         if(aRRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             //check if the desired number of objects is already spawned
@@ -75,16 +80,21 @@ public class PlaceObjectModified : MonoBehaviour
                 RotateObjectOnPlane(obj, hit.trackableId); //ref to rotating function
 
                 // instantiate the button prefab and set its parent to the canvas
-                GameObject button = Instantiate(buttonPrefab, canvas.transform);
-                button.transform.localPosition = Vector3.zero;
-                button.transform.localScale = Vector3.one;
+                if (getImageButton == null)
+                {
+                    getImageButton = Instantiate(buttonPrefab, canvas.transform);
+                }
+
+                getImageButton.SetActive(true);
+                getImageButton.transform.localPosition = Vector3.zero;
+                getImageButton.transform.localScale = Vector3.one;
 
                 // add an event listener to the button that destroys it when clicked
-                Button buttonComponent = button.GetComponent<Button>();
+                Button buttonComponent = getImageButton.GetComponent<Button>();
                 buttonComponent.onClick.AddListener(() =>
                 {
                     pickerController.LoadImage("path/to/image.jpg", liveMeshRenderer);
-                    Destroy(button);
+                    getImageButton.SetActive(false);
                 });
 
                 numSpawned++; //increment counter variable
