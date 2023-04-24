@@ -18,7 +18,7 @@ public class PlaceObjectModified : MonoBehaviour
     private Canvas canvas; // reference to the canvas object
     [SerializeField]
     private GameObject buttonPrefab; // reference to the button prefab
-    private GameObject getImageButton;
+    private GameObject getImageButton; // reference to keep track of button instance in the scene
     public PickerController pickerController; //ref to PickerController prefab
 
     private ARRaycastManager aRRaycastManager; //ref to raycast manager
@@ -85,9 +85,9 @@ public class PlaceObjectModified : MonoBehaviour
                     getImageButton = Instantiate(buttonPrefab, canvas.transform);
                 }
 
-                getImageButton.SetActive(true);
-                getImageButton.transform.localPosition = Vector3.zero;
-                getImageButton.transform.localScale = Vector3.one;
+                getImageButton.SetActive(true); //makes button visible
+                getImageButton.transform.localPosition = Vector3.zero; // displays button in the center of the canvas
+                getImageButton.transform.localScale = Vector3.one; // sets button to default scale value
 
                 // add an event listener to the button that destroys it when clicked
                 Button buttonComponent = getImageButton.GetComponent<Button>();
